@@ -123,7 +123,31 @@ One can get the displacements of the interior mesh nodes as
 The RBF mesh morphing technique uses the known displacements at the domain boundaries to construct an interpolation expression as a weighted sum of radial functions <img src="https://latex.codecogs.com/gif.latex?%5Cvarphi%3A%20%5Cmathbb%7BR%7D%20%5Crightarrow%20%5Cmathbb%7BR%7D">,
 
 <p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?s%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%20%3D%20%5Csum_%7Bj%3D1%7D%5EN%20%5Cgamma%5E%7B%5Calpha%7D_j%20%5Cvarphi%20%5Cleft%28%20%5C%7C%20%5Cmathbf%7Bx%7D%20-%20%5Cmathbf%7Bx%7D_%7Bs%2C%20j%7D%20%5C%7C_%7B%5Cmathbb%7BR%7D%5Ed%7D%20%5Cright%29%20&plus;%20p%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%2C%20%5Cquad%201%20%5Cleq%20%5Calpha%20%5Cleq%20d%2C">
+    <img src="https://latex.codecogs.com/gif.latex?s%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%20%3D%20%5Csum_%7Bj%3D1%7D%5EN%20%5Cgamma%5E%7B%5Calpha%7D_j%20%5Cvarphi%20%5Cleft%28%20%5C%7C%20%5Cmathbf%7Bx%7D%20-%20%5Cmathbf%7Bx%7D_%7Bs%2C%20j%7D%20%5C%7C_%7B%5Cmathbb%7BR%7D%5Ed%7D%20%5Cright%29%20&plus;%20p%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%2C%20%5Cquad%201%20%5Cleq%20%5Calpha%20%5Cleq%20d.">
+</p>
+
+The weighting coefficients and the polynomials are obtained by imposing the known displacements at the boundaries,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?s%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D_%7Bs%2C%20i%7D%20%5Cright%29%20%3D%20g%5E%7B%5Calpha%7D_%7Bs%2C%20i%7D%20%3D%20%5Cvar%7B%5Ctheta%7D%20n%5E%7B%5Calpha%7D%2C">
+</p>
+
+and the orthogonality conditions for every polynomial with degree less or equal than that of <img src="https://latex.codecogs.com/gif.latex?p%5E%7B%5Calpha%7D">,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Csum_%7Bj%3D1%7D%5EN%20%5Cgamma%5E%7B%5Calpha%7D_j%20q%20%5Cleft%28%20%5Cmathbf%7Bx%7D_%7Bs%2Cj%7D%20%5Cright%29%20%3D%200%2C%20%5Cquad%201%20%5Cleq%20%5Calpha%20%5Cleq%20d.">
+</p>
+
+At the end, a linear system of the form
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bpmatrix%7D%20%5Cmathbf%7BM%7D_s%20%26%20%5Cmathbf%7BP%7D_s%20%5C%5C%20%5Cmathbf%7BP%7D_s%5ET%20%26%20%5Cmathbf%7B0%7D%20%5Cend%7Bpmatrix%7D%20%5Cbegin%7Bpmatrix%7D%20%5Cmathbf%7B%5Cgamma%7D%5E%7B%5Calpha%7D%20%5C%5C%20%5Cmathbf%7B%5Cbeta%7D%5E%7B%5Calpha%7D%20%5Cend%7Bpmatrix%7D%20%3D%20%5Cbegin%7Bpmatrix%7D%20%5Cmathbf%7Bg%7D_s%5E%7B%5Calpha%7D%20%5C%5C%20%5Cmathbf%7B0%7D%20%5Cend%7Bpmatrix%7D">
+</p>
+
+must be solved, and the mesh nodes are updated as
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?x%5E%7B%5Cmathrm%7Bnew%7D%2C%20%5Calpha%7D%20%3D%20x%5E%7B%5Cmathrm%7Bold%7D%2C%20%5Calpha%7D%20&plus;%20s%5E%7B%5Calpha%7D%5Cleft%28%20%5Cmathbf%7Bx%7D%5E%7B%5Cmathrm%7Bold%7D%7D%20%5Cright%29.">
 </p>
 
 ## Getting Started
