@@ -108,6 +108,24 @@ The equilibrium equations can be expressed in terms of the nodes displacements,
 
 At the M nodes that belong to the boundary domain the displacements are prescribed with unknown forces acting on them. On the other hand, on the interior nodes of the mesh whose displacements are unknown, there are no other forces than the elastic ones. Let us denote with D the indices of the nodes with prescribed displacement, and with S the set of nodes with unknown displacements. The equilibrium can be expressed in matrix form as
 
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20%5Cmathbf%7BK%7D_%7BDD%7D%20%5Cmathbf%7Bu%7D_D%20&plus;%20%5Cmathbf%7BK%7D_%7BDS%7D%20%5Cmathbf%7Bu%7D_%7BS%7D%20%26%20%3D%20%5Cmathbf%7B%5CDelta%20F%7D_%7BD%7D%2C%20%5C%5C%20%5Cmathbf%7BK%7D_%7BSD%7D%20%5Cmathbf%7Bu%7D_D%20&plus;%20%5Cmathbf%7BK%7D_%7BSS%7D%20%5Cmathbf%7Bu%7D_%7BS%7D%20%26%20%3D%20%5Cmathbf%7B%5CDelta%20F%7D_%7BS%7D%20%3D%20%5Cmathbf%7B0%7D.%20%5Cend%7Balign*%7D">
+</p>
+
+One can get the displacements of the interior mesh nodes as
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7Bu%7D_S%20%3D%20-%5Cmathbf%7BK%7D_%7BSS%7D%5E%7B-1%7D%20%5Cmathbf%7BK%7D_%7BSD%7D%20%5Cmathbf%7Bu%7D_D.">
+</p>
+
+### Radial Basis Functions (RBF)
+
+The RBF mesh morphing technique uses the known displacements at the domain boundaries to construct an interpolation expression as a weighted sum of radial functions <img src="https://latex.codecogs.com/gif.latex?%5Cvarphi%3A%20%5Cmathbb%7BR%7D%20%5Crightarrow%20%5Cmathbb%7BR%7D">,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?s%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%20%3D%20%5Csum_%7Bj%3D1%7D%5EN%20%5Cgamma%5E%7B%5Calpha%7D_j%20%5Cvarphi%20%5Cleft%28%20%5C%7C%20%5Cmathbf%7Bx%7D%20-%20%5Cmathbf%7Bx%7D_%7Bs%2C%20j%7D%20%5C%7C_%7B%5Cmathbb%7BR%7D%5Ed%7D%20%5Cright%29%20&plus;%20p%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%2C%20%5Cquad%201%20%5Cleq%20%5Calpha%20%5Cleq%20d%2C">
+</p>
+
 ## Getting Started
 
 The solver must be compiled in the terminal. It is advisable to first clean previous compilations with
