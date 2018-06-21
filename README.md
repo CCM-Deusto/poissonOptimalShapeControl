@@ -267,7 +267,7 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-  <img src="figs/fig1.png" width="1133" height="953">
+  <img src="figs/fig1.png" width="1133/2" height="953/2">
 </p>
 
 The target function <img src="https://latex.codecogs.com/gif.latex?u_d"> will be the analytical solution of the Poisson equation with the inner hole centered in the origin,
