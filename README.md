@@ -267,7 +267,7 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-  <img src="figs/fig1.png" width="400" height="300">
+  <img src="figs/fig1.png" width="1133" height="953">
 </p>
 
 The target function <img src="https://latex.codecogs.com/gif.latex?u_d"> will be the analytical solution of the Poisson equation with the inner hole centered in the origin,
@@ -297,8 +297,8 @@ It is clear that for
 the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in Matlab with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
 
 <p float="center">
-  <img src="figs/fig2.png" width="400" height="300" />
-  <img src="figs/fig3.png" width="400" height="300" /> 
+  <img src="figs/fig2.png" width="1694" height="1291" />
+  <img src="figs/fig3.png" width="1694" height="1291" /> 
 </p>
 
 <p align="center">
@@ -308,12 +308,12 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 Other geometry configurations have been tried. For instance, the inner hole can be initially located farther from its optimal position,
 
 <p align="center">
-  <img src="figs/fig4.png" width="400" height="350">
+  <img src="figs/fig4.png" width="1133" height="953">
 </p>
 
 <p float="center">
-  <img src="figs/fig5.png" width="400" height="300" />
-  <img src="figs/fig6.png" width="400" height="300" /> 
+  <img src="figs/fig5.png" width="1694" height="1291" />
+  <img src="figs/fig6.png" width="1694" height="1291" /> 
 </p>
 
 <p align="center">
