@@ -52,7 +52,7 @@ with <img src="https://latex.codecogs.com/gif.latex?\epsilon"> sufficiently smal
 
 ## Mesh Motion Solver
 
-The solutions to the primal and adjoint problems are commonly approximated by means of numerical methods, such as the finite element method (FEM) or the finite volume method (FVM). In order to apply these techniques, the domain under study must be tessellated with a mesh. Nevertheless, applying the displacement directly to the controlled boundary will deteriorate the surrounding elements after a few iterations and the computation will crash if the interior nodes of the domain are not reallocated. In order to avoid this, the domain can be re-meshed after a number of iterations. However, this can be very expensive as a completely new mesh must be generated. A commonly used alternative is to move the interior nodes of the mesh according to the displacements prescribed on the boundary.  By doing this the number of elements and the nodes connectivities remain the same, only the mesh nodes positions are updated. The Solid Body Rotation Stress method and the Laplacian smoothing included in the OpenFOAM library have been used.
+The solutions to the primal and adjoint problems are commonly approximated by means of numerical methods, such as the finite element method (FEM) or the finite volume method (FVM). In order to apply these techniques, the domain under study must be tessellated with a mesh. Nevertheless, applying the displacement directly to the controlled boundary will deteriorate the surrounding elements after a few iterations and the computation will crash if the interior nodes of the domain are not reallocated. In order to avoid this, the domain can be re-meshed after a number of iterations. However, this can be very expensive as a completely new mesh must be generated. A commonly used alternative is to move the interior nodes of the mesh according to the displacements prescribed on the boundary.  By doing this the number of elements and the nodes connectivities remain the same, only the mesh nodes positions are updated.
 
 ### Linear Elasticity
 
@@ -64,7 +64,7 @@ Mesh motion can be achieved by treating the mesh as an elastic body and solving 
 
 ### Solid Body Rotation (SBR) Stress
 
-The Linear Elasticity model fails when dealing with rotating meshes. This can be mitigated by selecting the material properties in a proper manner,
+The Linear Elasticity model fails when dealing with rotating meshes. This can be mitigated by selecting the material properties in a proper manner, which yields
 
 <p align="center">
     <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%202%20%5Cpartial_j%20%5Cleft%28%20%5Cgamma%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%20%5Cpartial_j%20u_i%20%5Cright%29%20&plus;%20%5Cpartial_j%20%5Cleft%5B%20%5Cgamma%20%5Cleft%28%20%5Cmathbf%7Bx%7D%20%5Cright%29%20%5Cleft%28%20%5Cpartial_i%20u_j%20-%20%5Cpartial_j%20u_i%20-%20%5Cdelta_%7Bij%7D%20%5Cpartial_k%20u_k%20%5Cright%29%20%5Cright%5D%20%3D%200%2C%20%26%20%5Ctext%7Bin%20%7D%20%5COmega%20%5Cleft%28%20%5Ctheta%20%5Cright%20%29%2C%20%5C%5C%20u_i%20%3D%200%20%26%20%5Ctext%7Bon%20%7D%20%5CGamma_w%2C%20%5C%5C%20u_i%20%3D%20%5Cdelta%20%5Ctheta%20n_i%20%26%20%5Ctext%7Bon%20%7D%20%5CGamma_s%20%5Cleft%28%20%5Ctheta%20%5Cright%20%29.%20%5Cend%7Bcases%7D">
@@ -106,7 +106,7 @@ The equilibrium equations can be expressed in terms of the nodes displacements,
     <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7B%5CDelta%20F%7D_i%20-%20%5Csum_%7Bj%3D1%7D%5EN%20k_%7Bij%7D%20%5Cleft%28%20%5Cmathbf%7Bu%7D_i%20-%20%5Cmathbf%7Bu%7D_j%20%5Cright%29%20%3D%200%2C%20%5Cquad%201%20%5Cleq%20i%20%5Cleq%20N.">
 </p>
 
-At the M nodes that belong to the boundary domain the displacements are prescribed with unknown forces acting on them. On the other hand, on the interior nodes of the mesh whose displacements are unknown, there are no other forces than the elastic ones. Let us denote with D the indices of the nodes with prescribed displacement, and with S the set of nodes with unknown displacements. The equilibrium can be expressed in matrix form as
+At the M nodes that belong to the domain boundary the displacements are prescribed with unknown forces acting on them. On the other hand, on the interior nodes of the mesh whose displacements are unknown, there are no other forces than the elastic ones. Let us denote with D the indices of the nodes with prescribed displacement, and with S the set of nodes with unknown displacements. The equilibrium can be expressed in matrix form as
 
 <p align="center">
     <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20%5Cmathbf%7BK%7D_%7BDD%7D%20%5Cmathbf%7Bu%7D_D%20&plus;%20%5Cmathbf%7BK%7D_%7BDS%7D%20%5Cmathbf%7Bu%7D_%7BS%7D%20%26%20%3D%20%5Cmathbf%7B%5CDelta%20F%7D_%7BD%7D%2C%20%5C%5C%20%5Cmathbf%7BK%7D_%7BSD%7D%20%5Cmathbf%7Bu%7D_D%20&plus;%20%5Cmathbf%7BK%7D_%7BSS%7D%20%5Cmathbf%7Bu%7D_%7BS%7D%20%26%20%3D%20%5Cmathbf%7B%5CDelta%20F%7D_%7BS%7D%20%3D%20%5Cmathbf%7B0%7D.%20%5Cend%7Balign*%7D">
@@ -347,3 +347,26 @@ This project has received funding from the European Research Council (ERC) under
 [DyCon Webpage](http://cmc.deusto.eus/dycon/)
 
 ## References
+
+* O. Pironneau. _Optimal shape design for elliptic systems_. Springer Science & Business Media, 2012.
+
+Linear Elasticity mesh motion method:
+* Andrew A. Johnson and Tayfun E. Tezduyar. Mesh update strategies in parallel finite element computations of flow problems with moving boundaries and interfaces. _Computer methods in applied mechanics and engineering_, 119(1-2):73–94, 1994.
+* Thomas D. Economon, Francisco Palacios, and Juan J. Alonso. Unsteady continuous adjoint approach for aerodynamic design on dynamic meshes. _AIAA Journal_, 53(9):2437–2453, 2015.
+* George S. Eleftheriou and Guillaume Pierrot. Rigid motion mesh morpher: A novel approach for mesh deformation. In _OPT-i, An International Conference on Engineering and Applied Sciences Optimization_, Kos, Greece, pages 4–6, 2014.
+
+Solid Body Rotation (SBR) Stress method:
+* Richard P. Dwight. Robust mesh deformation using the linear elasticity equations. In _Computational fluid dynamics 2006_, pages 401–406. Springer, 2009.
+
+Laplacian Smoothing:
+* Peter Hansbo. Generalized laplacian smoothing of unstructured grids. _International Journal for Numerical Methods in Biomedical Engineering_, 11(5):455–464, 1995.
+* Rainald Löhner and Chi Yang. Improved ale mesh velocities for moving bodies. _Communications in numerical methods in engineering_, 12(10):599–608, 1996.
+* Hrvoje Jasak and Zeljko Tukovic. Automatic mesh motion for the unstructured finite volume method. _Transactions of FAMENA_, 30(2):1–20, 2006.
+
+Spring Analogy:
+* Ch. Farhat, C. Degand, B. Koobus, and M. Lesoinne. Torsional springs for two-dimensional dynamic unstructured fluid meshes. _Computer methods in applied mechanics and engineering_, 163(1-4):231–245, 1998.
+* Christoph Degand and Charbel Farhat. A three-dimensional torsional spring analogy method for unstructured dynamic meshes. _Computers & structures_, 80(3-4):305–316, 2002.
+* Carlo L Bottasso, Davide Detomi, and Roberto Serra. The ball-vertex method: a new simple spring analogy method for unstructured dynamic meshes. _Computer Methods in Applied Mechanics and Engineering_, 194(39-41):4244–4264, 2005.
+
+Radial Basis Functions mesh morphing:
+
