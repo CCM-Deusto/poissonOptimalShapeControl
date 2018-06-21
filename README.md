@@ -188,72 +188,71 @@ We must find the control points displacements <img src="https://latex.codecogs.c
 
 ## Getting Started
 
-The solver must be compiled in the terminal. It is advisable to first clean previous compilations with
+The file _main.m_ needs to be run from the Matlab command line,
 
-```
-wclean
-```
-
-and then use
-
-```
-wmake
+```Matlab
+main.m
 ```
 
 ### Dynamic Mesh
 
-The mesh motion solver is specified in the dictionary _constant/dynamicMeshDict_.
+The different mesh motion methods can be selected in the heading of _main.m_
 
-* For the Laplacian solver:
-
-```C++
-dynamicFvMesh   dynamicMotionSolverFvMesh;
-
-motionSolverLibs ( "libfvMotionSolvers.so" );
-
-solver          displacementLaplacian;
-
-displacementLaplacianCoeffs
-{
-    //diffusivity  	uniform;
-    //diffusivity     	inversePointDistance (deformedWall);
-    diffusivity     	quadratic inversePointDistance (deformedWall);
-}
+```Matlab
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PARAMETERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Minimum element size
+Hmin = 1e-3;
+% Maximum elements size
+Hmax = 0.05;
+% Step theta^{n+1} = theta^{n} - d * Dtheta^{n}
+d = 1e-3;
+% Maximum number of iterations
+maxIter = 2000000;
+% Dirichlet boundary condition on the outer boundary
+ue = 1;
+% Dirichlet boundary condition on the inner boundary
+uc = 0;
+% Smoothing of sensitivity field
+smoothing = true;
+% Reshaping of elements whose edges are lying on the controlled boundary
+reshaping = true;
+% Mesh motion solver method:
+% - Laplace Equation ('laplace')
+% - Spring Analogy ('spring')
+% - Free Form Deformation ('FFD')
+% - Radial Basis Functions ('RBF')
+meshMotionSolver = 'laplace';
+% Parameters for Laplace method
+% Diffusivity (diff)
+% - Inverse distance ('invdist')
+invdist = true;
+m = 6;
+% Parameters for FFD method:
+% Mi - number of control points along X axis
+% Nj - number of control points along Y axis
+% Xmin, Xmax - coordinates defining the control rectangle
+Mi = 9;
+Nj = 9;
+Xmin = [-0.7, -0.6];
+Xmax = -Xmin;
+% Parameters for RBF method
+% h - Dimensionless radial distance (r/h)
+% RBFtype - Radial Basis Functions
+% - Spline type, n odd ('Rn')
+% - Thin Plate Spline, n even ('TPSn')
+% - Multiquadratic ('MQ')
+% - Inverse multiquadratic ('IMQ')
+% - Inverse quadratic ('IQ')
+% - Gaussian ('GS')
+% n - Exponent
+h = 2.5*0.3;
+RBFtype = 'R';
+n = 1;
 ```
-
-* For SBR Stress method:
-
-```C++
-motionSolver 	displacementSBRStress;
-
-displacementSBRStressCoeffs
-{
-    // diffusivity  	uniform;
-    // diffusivity  	directional (1 200 0);
-    // diffusivity  	motionDirectional (1 1000 0);
-    // diffusivity  	file motionDiffusivity;
-    // diffusivity  	quadratic inverseFaceDistance (deformedWall);
-    // diffusivity  	quadratic inverseDistance (deformedWall);
-    diffusivity  	quadratic inversePointDistance (deformedWall);
-    // diffusivity	inversePointDistance (deformedWall);
-}
-```
-
-### Prerequisites
-
-OpenFOAM C++ library must be installed in order to compile the code.
-
-The OpenFOAM distribution provided by the [OpenFOAM Foundation](https://openfoam.org/) was used.
 
 ## Running a Case
-
-In order to run the solver move to the case folder _poissonOptShapeFoamCase_ and type in the command line
-
-```
-./Allprepare
-
-poissonOptShapeFoam
-```
 
 The shape optimization method described in the previous section has been tested with a simple example. The Poisson equation is posed in a two-dimensional circular domain with boundary
 
@@ -308,26 +307,6 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 <p align="center">
   <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="400" height="300">
 </p>
-
-### Warning
-
-It might be needed to use 
-
-```
-sed -i -e 's/\r$//' filename
-```
-
-and
-
-```
-chmod +x filename
-```
-
-in order to be able to execute 
-
-```
-./filename
-```
 
 ## Author
 
