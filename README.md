@@ -301,7 +301,7 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 </p>
 
 <p align="center">
-  <img src="fig3.png" width="400" height="300">
+  <img src="figs/fig3.png" width="400" height="300">
 </p>
 
 ## Author
