@@ -369,4 +369,18 @@ Spring Analogy:
 * Carlo L Bottasso, Davide Detomi, and Roberto Serra. The ball-vertex method: a new simple spring analogy method for unstructured dynamic meshes. _Computer Methods in Applied Mechanics and Engineering_, 194(39-41):4244–4264, 2005.
 
 Radial Basis Functions mesh morphing:
+* Stefan Jakobsson and Olivier Amoignon. Mesh deformation using radial basis functions for gradient-based aerodynamic shape optimization. _Computers & Fluids_, 36(6):1119–1136, 2007.
+* AM Morris, CB Allen, and TCS Rendall. Cfd-based optimization of aerofoils using radial basis functions for domain element parameterization and mesh deformation. _International Journal for Numerical Methods in Fluids_, 58(8):827–860, 2008.
+* Daniel Sieger, Stefan Menzel, and Mario Botsch. High quality mesh morphing using triharmonic radial basis functions. In _Proceedings of the 21st International Meshing Roundtable_, pages 1–15. Springer, 2013.
+* Marco Evangelos Biancolini. _Fast Radial Basis Functions for Engineering Applications_. Springer, 2018.
+* Fank Martijn Bos. _Numerical simulations of flapping foil and wing aerodynamics: Mesh deformation using radial basis functions_. PhD thesis, Technische Universiteit Delf, 2010.
+* Armin Beckert and Holger Wendland. Multivariate interpolation for fluid-structure-interaction problems using radial basis functions. _Aerospace Science and Technology_,
+5(2):125–134, 2001.
+* A De Boer, MS Van der Schoot, and Hester Bijl. Mesh deformation based on radial basis function interpolation. _Computers & structures_, 85(11-14):784–795, 2007.
+* Holger Wendland. _Konstruktion und Untersuchung radialer Basisfunktionen mit kompaktem Träger_. PhD thesis, Göttingen, Georg-August-Universität zu Göttingen, Diss, 1996.
 
+Free Form Deformation technique:
+* Matteo Lombardi, Nicola Parolini, Alfio Quarteroni, and Gianluigi Rozza. Numerical
+simulation of sailing boats: Dynamics, fsi, and shape optimization. In _Variational Analysis and Aerospace Engineering: Mathematical Challenges for Aerospace Design_, pages 339–377. Springer, 2012.
+* Thomas W Sederberg and Scott R Parry. Free-form deformation of solid geometric models. _ACM SIGGRAPH computer graphics_, 20(4):151–160, 1986.
+* Michele Andreoli, Janka Ales, and Jean-Antoine Désidéri. _Free-form-deformation parameterization for multilevel 3D shape optimization in aerodynamics_. PhD thesis, INRIA, 2003.
