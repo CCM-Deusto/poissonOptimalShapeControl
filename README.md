@@ -267,7 +267,7 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-  <img src="fig1.png" width="400" height="300">
+  <img src="figs/fig1.png" width="400" height="300">
 </p>
 
 The target function <img src="https://latex.codecogs.com/gif.latex?u_d"> will be the analytical solution of the Poisson equation with the inner hole centered in the origin,
@@ -302,6 +302,10 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 
 <p align="center">
   <img src="figs/fig3.png" width="400" height="300">
+</p>
+
+<p align="center">
+  <img src="figs/laplace_NS_NR_invdist2.gif" width="400" height="300">
 </p>
 
 ## Author

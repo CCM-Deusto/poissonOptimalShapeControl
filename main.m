@@ -18,9 +18,9 @@ ue = 1;
 % Dirichlet boundary condition on the inner boundary
 uc = 0;
 % Smoothing of sensitivity field
-smoothing = true;
+smoothing = false;
 % Reshaping of elements whose edges are lying on the controlled boundary
-reshaping = true;
+reshaping = false;
 % Mesh motion solver method:
 % - Laplace Equation ('laplace')
 % - Spring Analogy ('spring')
@@ -31,7 +31,7 @@ meshMotionSolver = 'laplace';
 % Diffusivity (diff)
 % - Inverse distance ('invdist')
 invdist = true;
-m = 6;
+m = 2;
 % Parameters for FFD method:
 % Mi - number of control points along X axis
 % Nj - number of control points along Y axis
@@ -98,9 +98,16 @@ video.FrameRate = 50;
 video.Quality=100;
 open(video);
 
-figure(20)
+fighandle = figure(20);
 triplot(tr)
 axis equal
+
+filename = 'anim.gif';
+% Capture the plot as an image 
+frame = getframe(fighandle); 
+im = frame2im(frame); 
+[imind,cm] = rgb2ind(im,256);
+imwrite(imind,cm,filename,'gif', 'Loopcount',inf); 
 
 while (iter <= maxIter && count < Ncount && fss > eps)
 
@@ -288,9 +295,16 @@ while (iter <= maxIter && count < Ncount && fss > eps)
     plot(0.3*cos(th), 0.3*sin(th), 'black')
     hold off
     
-    % Write to video
+    % Write to video/gif
     if rem(iter-1, 1) == 0
         writeVideo(video, getframe(gcf));
+
+        % Capture the plot as an image 
+        frame = getframe(fighandle); 
+        im = frame2im(frame); 
+        [imind,cm] = rgb2ind(im,256); 
+        % Write to the GIF File 
+        imwrite(imind,cm,filename,'gif','DelayTime',0.05,'WriteMode','append'); 
     end
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -14,10 +14,10 @@ model = createpde;
 % - Circle hole inside circle ('circle')
 % - Square hole inside circle ('square')
 % - Square hole inside square ('2square')
-geom = 'square';
+geom = 'circle';
 % Hole center coordinates
-chx = 0.2;
-chy = 0.2;
+chx = 0.1;
+chy = 0.1;
 % Hole radius
 rh = 0.3;
 % Circle center coordinates
