@@ -26,7 +26,7 @@ reshaping = true;
 % - Spring Analogy ('spring')
 % - Free Form Deformation ('FFD')
 % - Radial Basis Functions ('RBF')
-meshMotionSolver = 'laplace';
+meshMotionSolver = 'RBF';
 % Parameters for Laplace method
 % Diffusivity (diff)
 % - Inverse distance ('invdist')
