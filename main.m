@@ -103,7 +103,8 @@ triplot(tr)
 axis equal
 
 filename = 'anim.gif';
-% Capture the plot as an image 
+% Capture the plot as an image
+set(fighandle, 'color', 'white');
 frame = getframe(fighandle); 
 im = frame2im(frame); 
 [imind,cm] = rgb2ind(im,256);

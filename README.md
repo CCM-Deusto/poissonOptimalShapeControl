@@ -309,7 +309,6 @@ Other geometry configurations have been tried. For instance, the inner hole can 
 
 <p align="center">
   <img src="figs/fig4.png" width="400" height="340" />
-  <img src="figs/laplace_c3_NS_NR_invdist2.gif" width="400" height="300" />
 </p>
 
 <p float="center">
