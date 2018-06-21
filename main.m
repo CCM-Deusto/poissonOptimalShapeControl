@@ -300,6 +300,7 @@ while (iter <= maxIter && count < Ncount && fss > eps)
         writeVideo(video, getframe(gcf));
 
         % Capture the plot as an image 
+        set(fighandle, 'color', 'white');
         frame = getframe(fighandle); 
         im = frame2im(frame); 
         [imind,cm] = rgb2ind(im,256); 

@@ -16,8 +16,8 @@ model = createpde;
 % - Square hole inside square ('2square')
 geom = 'circle';
 % Hole center coordinates
-chx = 0.3;
-chy = 0.3;
+chx = 0.1;
+chy = 0.1;
 % Hole radius
 rh = 0.3;
 % Circle center coordinates

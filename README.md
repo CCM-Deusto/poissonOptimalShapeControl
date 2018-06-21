@@ -302,7 +302,7 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 </p>
 
 <p align="center">
-  <img src="figs/laplace_NS_NR_invdist2.gif" width="400" height="300">
+  <img src="figs/laplace_c1_NS_NR_invdist2.gif" width="400" height="300">
 </p>
 
 Other geometry configurations have been tried. For instance, the inner hole can be initially located farther from its optimal position,
