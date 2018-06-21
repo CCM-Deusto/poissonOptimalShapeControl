@@ -314,6 +314,11 @@ Other geometry configurations have been tried. For instance, the inner hole can 
   <img src="figs/fig4.png" width="400" height="300">
 </p>
 
+<p float="left">
+  <img src="figs/fig5.png" width="400" height="300" />
+  <img src="figs/fig6.png" width="400" height="300" /> 
+</p>
+
 ![alt-fig5](figs/fig5.png "title-1") ![alt-fig6](figs/fig6.png "title-2")
 
 <p align="center">
