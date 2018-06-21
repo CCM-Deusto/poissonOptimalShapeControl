@@ -129,7 +129,7 @@ The RBF mesh morphing technique uses the known displacements at the domain bound
 The weighting coefficients and the polynomials are obtained by imposing the known displacements at the boundaries,
 
 <p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?s%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D_%7Bs%2C%20i%7D%20%5Cright%29%20%3D%20g%5E%7B%5Calpha%7D_%7Bs%2C%20i%7D%20%3D%20%5Cvar%7B%5Ctheta%7D%20n%5E%7B%5Calpha%7D%2C">
+    <img src="https://latex.codecogs.com/gif.latex?s%5E%7B%5Calpha%7D%20%5Cleft%28%20%5Cmathbf%7Bx%7D_%7Bs%2C%20i%7D%20%5Cright%29%20%3D%20g%5E%7B%5Calpha%7D_%7Bs%2C%20i%7D%20%3D%20%5Cdelta%20%5Ctheta%20n%5E%7B%5Calpha%7D%2C">
 </p>
 
 and the orthogonality conditions for every polynomial with degree less or equal than that of <img src="https://latex.codecogs.com/gif.latex?p%5E%7B%5Calpha%7D">,
@@ -148,6 +148,22 @@ must be solved, and the mesh nodes are updated as
 
 <p align="center">
     <img src="https://latex.codecogs.com/gif.latex?x%5E%7B%5Cmathrm%7Bnew%7D%2C%20%5Calpha%7D%20%3D%20x%5E%7B%5Cmathrm%7Bold%7D%2C%20%5Calpha%7D%20&plus;%20s%5E%7B%5Calpha%7D%5Cleft%28%20%5Cmathbf%7Bx%7D%5E%7B%5Cmathrm%7Bold%7D%7D%20%5Cright%29.">
+</p>
+
+### Free Form Deformation (FFD)
+
+An alternative is to use some parametrization technique for the boundary <img src="https://latex.codecogs.com/gif.latex?%5CGamma_s%20%5Cleft%28%20%5Ctheta%20%5Cright%20%29"> and extend it to be able to handle the motion of the interior nodes of the mesh as well. This can be done with the Free Form Deformation method, that is based upon the positions of a set of control points inside a parallelepiped.
+
+If we consider the 2-dimensional reference control domain <img src="https://latex.codecogs.com/gif.latex?%5COmega_%7Bst%7D%3D%5Cleft%5B%200%2C%201%20%5Cright%5D%20%5Ctimes%20%5Cleft%5B%200%20%2C%201%20%5Cright%5D">, we can define a set of <img src="https://latex.codecogs.com/gif.latex?%5Cleft%28%20N%20&plus;%201%20%5Cright%29%20%5Ctimes%20%5Cleft%28%20M%20&plus;%201%20%5Cright%29"> evenly spaced control points,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7BP%7D_%7Bij%7D%20%3D%20%5Cleft%28%20%5Cfrac%7Bi%7D%7BM%7D%2C%20%5Cfrac%7Bj%7D%7BN%7D%20%5Cright%29%2C%20%5Cquad%200%20%5Cleq%20i%20%5Cleq%20M%2C%20%5Cquad%200%20%5Cleq%20j%20%5Cleq%20N%2C">
+</p>
+
+and introduce the tensorial product of Bernstein polynomials <img src="https://latex.codecogs.com/gif.latex?B_%7Bij%7D%5E%7BMN%7D%5Cleft%5B%5Cmathbf%7BS%7D%20%3D%20%5Cleft%28s%2C%20t%20%5Cright%29%20%5Cright%5D%20%3D%20b_i%20%5EM%20%5Cleft%28%20s%20%5Cright%29%20b_j%20%5EN%20%5Cleft%28%20t%20%5Cright%29">, with
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20b_i%5EM%20%5Cleft%28%20s%20%5Cright%29%20%26%3D%20%5Cbinom%7BM%7D%7Bi%7D%20s%5Ei%20%5Cleft%281-s%5Cright%29%20%5E%7BM-i%7D%2C%20%5C%5C%20b_j%5EN%20%5Cleft%28%20t%20%5Cright%29%20%26%3D%20%5Cbinom%7BN%7D%7Bj%7D%20t%5Ej%20%5Cleft%281-t%5Cright%29%20%5E%7BN-j%7D.%20%5Cend%7Balign*%7D">
 </p>
 
 ## Getting Started
