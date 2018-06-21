@@ -267,7 +267,7 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig1.png" width="400" height="300">
+  <img src="fig1.png" width="400" height="300">
 </p>
 
 The target function <img src="https://latex.codecogs.com/gif.latex?u_d"> will be the analytical solution of the Poisson equation with the inner hole centered in the origin,
@@ -297,11 +297,11 @@ It is clear that for
 the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in Matlab with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="300">
+  <img src="figs/fig2.png" width="400" height="300">
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig3.png" width="400" height="300">
+  <img src="fig3.png" width="400" height="300">
 </p>
 
 ## Author
