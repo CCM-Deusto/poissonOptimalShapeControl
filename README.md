@@ -349,6 +349,7 @@ This project has received funding from the European Research Council (ERC) under
 ## References
 
 * O. Pironneau. _Optimal shape design for elliptic systems_. Springer Science & Business Media, 2012.
+* J Simon. _Diferenciación de problemas de contorno respecto del dominio_. Technical report, Universidad de Sevilla, Facultad de Matemáticas, Departamento de Análisis Matemático, 1989.
 
 Linear Elasticity mesh motion method:
 * Andrew A. Johnson and Tayfun E. Tezduyar. Mesh update strategies in parallel finite element computations of flow problems with moving boundaries and interfaces. _Computer methods in applied mechanics and engineering_, 119(1-2):73–94, 1994.
