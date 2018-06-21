@@ -166,6 +166,26 @@ and introduce the tensorial product of Bernstein polynomials <img src="https://l
     <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20b_i%5EM%20%5Cleft%28%20s%20%5Cright%29%20%26%3D%20%5Cbinom%7BM%7D%7Bi%7D%20s%5Ei%20%5Cleft%281-s%5Cright%29%20%5E%7BM-i%7D%2C%20%5C%5C%20b_j%5EN%20%5Cleft%28%20t%20%5Cright%29%20%26%3D%20%5Cbinom%7BN%7D%7Bj%7D%20t%5Ej%20%5Cleft%281-t%5Cright%29%20%5E%7BN-j%7D.%20%5Cend%7Balign*%7D">
 </p>
 
+The transformation
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7B%5CPsi%7D%20%5Cleft%28%20%5Cmathbf%7BS%7D%20%5Cright%29%20%3D%20%5Csum_%7Bi%3D0%7D%5EM%20%5Csum_%7Bj%3D0%7D%5EN%20B_%7Bij%7D%5E%7BMN%7D%20%5Cleft%28%20%5Cmathbf%7BS%7D%20%5Cright%29%20%5Cmathbf%7BP%7D_%7Bij%7D">
+</p>
+
+is the identity transformation, i.e., <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7B%5CPsi%7D%5Cleft%28%20%5Cmathbf%7BS%7D%20%5Cright%29%20%3D%20%5Cmathbf%7BS%7D">. 
+
+We consider a set of control points defined as displacements from the reference positions, <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7BP%7D_%7Bij%7D%20&plus;%20%5Cmathbf%7B%5CDelta%20P%7D_%7Bij%7D">. In this case it is easy to see that the following holds
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7B%20%5CDelta%20S%20%7D%20%3D%20%5Cmathbf%7B%20%5CPsi%20%7D%20%5Cleft%28%20%5Cmathbf%7BS%7D%20%5Cright%29%20-%20%5Cmathbf%7BS%7D%20%3D%20%5Csum_%7Bi%3D0%7D%5EM%20%5Csum_%7Bj%3D0%7D%5EN%20B_%7Bij%7D%5E%7BMN%7D%20%5Cleft%28%20%5Cmathbf%7BS%7D%20%5Cright%29%20%5Cmathbf%7B%20%5CDelta%20P%20%7D_%7Bij%7D.">
+</p>
+
+We must find the control points displacements <img src="https://latex.codecogs.com/gif.latex?%24%5Cmathbf%7B%5CDelta%20P%7D_%7Bij%7D%20%5Cin%20%5COmega_%7Bst%7D%24"> that parametrize the controlled boundary and for which, for every boundary node <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7BX%7D_%7Bs%2Ck%7D%20%5Cin%20%5CGamma_s%20%5Cleft%28%20%5Ctheta%20%5Cright%20%29%2C%20%5C%201%20%5Cleq%20k%20%5Cleq%20Z">,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cmathbf%7B%5CPhi%7D%20%5Cleft%28%20%5Cmathbf%7BX%7D_%7Bs%2Ck%7D%20&plus;%20%5Cvar%7B%5Ctheta%7D%20%5Cmathbf%7Bn%7D%20%5Cright%29%20-%20%5Cmathbf%7B%5CPhi%7D%20%5Cleft%28%20%5Cmathbf%7BX%7D_%7Bs%2Ck%7D%20%5Cright%29%20%3D%20%5Csum_%7Bi%3D0%7D%5EM%20%5Csum_%7Bj%3D0%7D%5EN%20B_%7Bij%7D%5E%7BMN%7D%20%5Cleft%5B%20%5Cmathbf%7B%5CPhi%7D%20%5Cleft%28%20%5Cmathbf%7BX%7D_%7Bs%2Ck%7D%20%5Cright%29%20%5Cright%5D%20%5Cmathbf%7B%20%5CDelta%20P%7D_%7Bij%7D%2C%20%5Cquad%201%20%5Cleq%20k%20%5Cleq%20M.">
+</p>
+
 ## Getting Started
 
 The solver must be compiled in the terminal. It is advisable to first clean previous compilations with
