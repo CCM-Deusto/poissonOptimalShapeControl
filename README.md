@@ -296,12 +296,9 @@ It is clear that for
 
 the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in Matlab with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
 
-<p align="center">
-  <img src="figs/fig2.png" width="400" height="300">
-</p>
-
-<p align="center">
-  <img src="figs/fig3.png" width="400" height="300">
+<p float="center">
+  <img src="figs/fig2.png" width="400" height="300" />
+  <img src="figs/fig3.png" width="400" height="300" /> 
 </p>
 
 <p align="center">
@@ -311,22 +308,12 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 Other geometry configurations have been tried. For instance, the inner hole can be initially located farther from its optimal position,
 
 <p align="center">
-  <img src="figs/fig4.png" width="400" height="300">
+  <img src="figs/fig4.png" width="400" height="350">
 </p>
 
-<p float="left">
+<p float="center">
   <img src="figs/fig5.png" width="400" height="300" />
   <img src="figs/fig6.png" width="400" height="300" /> 
-</p>
-
-![alt-fig5](figs/fig5.png "title-1") ![alt-fig6](figs/fig6.png "title-2")
-
-<p align="center">
-  <img src="figs/fig5.png" width="400" height="300">
-</p>
-
-<p align="center">
-  <img src="figs/fig6.png" width="400" height="300">
 </p>
 
 <p align="center">
