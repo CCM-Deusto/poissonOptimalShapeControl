@@ -18,9 +18,9 @@ ue = 1;
 % Dirichlet boundary condition on the inner boundary
 uc = 0;
 % Smoothing of sensitivity field
-smoothing = false;
+smoothing = true;
 % Reshaping of elements whose edges are lying on the controlled boundary
-reshaping = false;
+reshaping = true;
 % Mesh motion solver method:
 % - Laplace Equation ('laplace')
 % - Spring Analogy ('spring')
