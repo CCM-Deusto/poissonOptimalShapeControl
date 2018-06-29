@@ -357,8 +357,8 @@ Different starting shapes can be tested as well,
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig8.png" target="_blank"><img src="figs/fig5.png" width="400" height="300"></a>
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig9.png" target="_blank"><img src="figs/fig6.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig8.png" target="_blank"><img src="figs/fig8.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig9.png" target="_blank"><img src="figs/fig9.png" width="400" height="300"></a>
 </p>
 
 <p align="center">
