@@ -267,7 +267,7 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig1.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig1.png" width="400" height="340"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig1.png" target="_blank"><img src="figs/fig1.png" width="400" height="340"></a>
 </p>
 
 <p align="center">
@@ -301,8 +301,8 @@ It is clear that for
 the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in Matlab with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig2.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig2.png" width="400" height="300"></a>
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig3.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig3.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig2.png" target="_blank"><img src="figs/fig2.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig3.png" target="_blank"><img src="figs/fig3.png" width="400" height="300"></a>
 </p>
 
 <p align="center">
@@ -311,7 +311,7 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/laplace_c1_NS_NR_invdist2.gif" target="_blank"><img src="poissonOptimalShapeControl/figs/laplace_c1_NS_NR_invdist2.gif" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/laplace_c1_NS_NR_invdist2.gif" target="_blank"><img src="figs/laplace_c1_NS_NR_invdist2.gif" width="400" height="300"></a>
 </p>
 
 <p align="center">
@@ -321,7 +321,7 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 Other geometry configurations have been tried. For instance, the inner hole can be initially located farther from its optimal position,
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig4.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig4.png" width="400" height="340"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig4.png" target="_blank"><img src="figs/fig4.png" width="400" height="340"></a>
 </p>
 
 <p align="center">
@@ -329,8 +329,8 @@ Other geometry configurations have been tried. For instance, the inner hole can 
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig5.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig5.png" width="400" height="300"></a>
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig6.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig6.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig5.png" target="_blank"><img src="figs/fig5.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig6.png" target="_blank"><img src="figs/fig6.png" width="400" height="300"></a>
 </p>
 
 <p align="center">
@@ -339,7 +339,7 @@ Other geometry configurations have been tried. For instance, the inner hole can 
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/laplace_c3_S_R_invdist2.gif" target="_blank"><img src="poissonOptimalShapeControl/figs/laplace_c1_NS_NR_invdist2.gif" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/laplace_c3_S_R_invdist2.gif" target="_blank"><img src="figs/laplace_c1_NS_NR_invdist2.gif" width="400" height="300"></a>
 </p>
 
 <p align="center">
@@ -349,7 +349,7 @@ Other geometry configurations have been tried. For instance, the inner hole can 
 Different starting shapes can be tested as well,
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig7.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig7.png" width="400" height="340"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig7.png" target="_blank"><img src="figs/fig7.png" width="400" height="340"></a>
 </p>
 
 <p align="center">
@@ -357,8 +357,8 @@ Different starting shapes can be tested as well,
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig8.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig5.png" width="400" height="300"></a>
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig9.png" target="_blank"><img src="poissonOptimalShapeControl/figs/fig6.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig8.png" target="_blank"><img src="figs/fig5.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/fig9.png" target="_blank"><img src="figs/fig6.png" width="400" height="300"></a>
 </p>
 
 <p align="center">
@@ -367,7 +367,7 @@ Different starting shapes can be tested as well,
 </p>
 
 <p align="center">
-   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/laplace_c3_S_R_invdist2.gif" target="_blank"><img src="poissonOptimalShapeControl/figs/RBF_s2_S_R_R1.gif" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptimalShapeControl/blob/master/figs/laplace_c3_S_R_invdist2.gif" target="_blank"><img src="figs/RBF_s2_S_R_R1.gif" width="400" height="300"></a>
 </p>
 
 <p align="center">
